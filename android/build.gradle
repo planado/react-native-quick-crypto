@@ -133,7 +133,7 @@ android {
             "**/libjsi.so",
             "**/libreact_nativemodule_core.so",
             "**/libturbomodulejsijni.so",
-            "**/MANIFEST.MF",
+            "**/MANIFEST.MF"
     ]
   }
 
@@ -160,6 +160,10 @@ android {
     targetCompatibility JavaVersion.VERSION_1_8
   }
 
+  packagingOptions {
+    exclude 'META-INF/com.android.tools/proguard/coroutines.pro'
+    exclude 'META-INF/proguard/coroutines.pro'
+  }
 }
 
 repositories {
